@@ -19,36 +19,32 @@
         </nav>
     </header>
     <main>
-            <section class="index-banner">
-                <div class="index-banner-center">
-                <h2>
-                    Welcome to My Personal Page
-                </h2>
-                <h1>
-                    Hi, I'm Justin Forgette
-                </h1>
-                </div>
+        <div class="wrapper">
+            <section class="project-intro">
+                <h1>Projects</h1>
+                <p>Welcome to the projects page! Here's a selection of what I've been working on.</p>
             </section>
-        <div class = "wrapper">
-            <section class="index-boxes">
-                <a href="projects.php">
-                <div class="index-boxlink-square">
-                    <h3>Projects</h3>
-                </div>
-                </a>
-                <a href="about.php">
-                <div class="index-boxlink-rectangle">
-                    <h3>About Me</h3>
-                </div>
-                </a>
-                <a href="contact.php">
-                <div class="index-boxlink-square">
-                    <h3>Contact</h3>
-                </div>
-                </a>
+            <section class="project-list">
+                <article class="project-item-rexcraft">
+                    <h2>RexCraft</h2>
+                    <h3>2022 - Present</h3>
+                    <p>RexCraft is a small mod for the video game Minecraft. For more details, check out my GitHub page!</p>
+                    <a href="https://github.com/J4jet/RexCraft1.19.2" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/rexcraft" target="_blank" rel="noopener noreferrer">CurseForge</a>
+                    <a href="https://trello.com/b/5WpwbPpy/rexcraft" target="_blank" rel="noopener noreferrer">Trello</a>
+                    <div class="project-img">
+                        <img src="img/rexcraft-logo-rounded.png" alt="RexCraft Logo">
+                    </div>
+                </article>
+                <article class="project-item">
+                    <h2>This Website</h2>
+                    <h3>2025 - Present</h3>
+                    <p>This page itself is a small project that showcases some of my skills while also serving as a portfolio.</p>
+                    <a href="https://github.com/J4jet/personal_page/tree/main" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </article>
             </section>
-        </main>
         </div>
+    </main>
     <div class="wrapper">
         <footer>
             <ul>

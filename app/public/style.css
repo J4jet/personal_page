@@ -56,6 +56,12 @@ table {
     text-decoration: none;
 }
 
+/* Main Styles */
+
+main {
+    padding-top: 100px;
+}
+
 body {
     background-color: #f4f4f4;
 }
@@ -64,6 +70,10 @@ header {
     background-color: #fff;
     width: 100%;
     height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 header .header-name {
@@ -187,6 +197,7 @@ header .header-github {
     width: calc(100% - 32px);
     height: 100px;
     background-color: #cdcdcd;
+    border-radius: 8px; /* <-- Add this line */
 }
 
 .index-boxes div h3 {
@@ -230,6 +241,182 @@ header .header-github {
     .index-boxes div h3 {
         line-height: 200px;
     }
+}
+
+/* PROJECTS */
+
+.project-intro {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.project-intro h1{
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    margin-left: 20px;
+}
+
+.project-intro p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.project-item {
+    background-color: #dadada;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(100% - 60px);
+}
+
+.project-item-rexcraft {
+    position: relative; /* Needed for absolute positioning of child */
+    overflow: hidden;   /* Prevent overflow from absolutely positioned img */
+    background-image: url('img/cobble.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    padding: 20px;
+    padding-bottom: 20px; /* Reduce if needed */
+    margin-bottom: 20px;
+    width: calc(100% - 60px);
+    display: block; 
+}
+
+.project-item h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.project-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.project-item a:hover {
+    background-color: #0056b3;
+}
+
+.project-img img{
+    display: none; 
+    width: 50px;
+    float: right;
+
+}
+
+.project-item-rexcraft h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-item-rexcraft h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-item-rexcraft p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.project-item-rexcraft a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+}
+
+.project-item-rexcraft a:hover {
+    background-color: #0056b3;
+}
+
+.project-img img{
+    display: none; 
+}
+
+.project-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.project-item a:hover {
+    background-color: #0056b3;
+}
+
+.project-img img{
+    display: none; 
+    width: 50px;
+    float: right;
+
+}
+
+.project-item-rexcraft h2,
+.project-item-rexcraft h3,
+.project-item h3,
+.project-item-rexcraft p,
+.project-item h2,
+.project-item p {
+    background-color: #f4f4f4;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: block;      /* Only as wide as the text */
+    width: fit-content;         /* Only as wide as the content */
+    margin-right: 0;
+
+}
+
+/* Desktop Only */
+@media (min-width: 768px) {
+    .project-img img{
+        position: absolute;
+        right: 20px;           /* Distance from right edge */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 120px;          /* Or your preferred size */
+        border-radius: 6px;
+        display: block;
+        overflow: hidden;
+        padding-bottom: 0px;
+    }
+
 }
 
 /* FOOTER */

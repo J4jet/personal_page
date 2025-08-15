@@ -1,2 +1,2 @@
-# personal_page
-Personal webpage
+# My Personal Page
+This is just a small personal project that I'm doing to brush up on some web development, while also making myself a functioning personal webpage. I would like this to eventually be a page I can put on my LinkedIn and such that would serve the dual purposes of providing some extra details about myself that aren’t on a resume, while being itself a non-academic project I can point at to show at least some of what I’m capable of in a short timeframe.
