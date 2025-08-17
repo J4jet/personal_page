@@ -464,6 +464,69 @@ header .header-github {
     text-decoration: underline;
 }
 
+/* ABOUT */
+
+.about-intro {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.about-intro h1{
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    margin-left: 20px;
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.about-header h2 {
+    margin-bottom: 0;
+    margin-right: 16px;
+}
+
+.about-header img {
+    width: 60px;
+    height: auto;
+}
+
+.about-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.about-item {
+    background-color: #dadada;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(100% - 60px);
+}
+
+.about-item h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-item p {
+    font-size: 18px;
+    margin-bottom: 0px;
+    line-height: 1.3;
+}
+
+.about-item img {
+    width: 50px;
+}
+
 /* FOOTER */
 
 footer {

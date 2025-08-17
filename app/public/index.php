@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Page</title>
+    <title>Justin Forgette - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,10 +22,10 @@
             <section class="index-banner">
                 <div class="index-banner-center">
                 <h2>
-                    Welcome to My Personal Page
+                    Justin Forgette
                 </h2>
                 <h1>
-                    Hi, I'm Justin Forgette
+                    Hi, I'm Justin Forgette. I'm ...
                 </h1>
                 </div>
             </section>
