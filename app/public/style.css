@@ -419,6 +419,51 @@ header .header-github {
 
 }
 
+/* CONTACT */
+.contact-intro {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.contact-intro h1{
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    margin-left: 20px;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.contact-item {
+    background-color: #dadada;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(100% - 60px);
+}
+
+.contact-item h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.contact-linked {
+    color: #007bff;
+    text-decoration: underline;
+}
+
 /* FOOTER */
 
 footer {
