@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin Forgette - About Me</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" id="theme-style">
 </head>
 <body>
     <header>
@@ -16,6 +16,7 @@
                 <li><a href="contact.php">Contact</a></li>
             </ul>
             <a href="https://github.com/J4jet" target="_blank" rel="noopener noreferrer" class="header-github">GitHub</a>
+            <button id="theme-toggle" class="header-theme-toggle">Dark Mode</button>
         </nav>
     </header>
     <main>
@@ -24,9 +25,13 @@
                 <h1>About Me</h1>
             </section>
             <section class="about-list">
-                <article class="about-item">
-                    <p>I am Apollyon. I have come to instruct. For too long, the fearful prey among the Vikings have whispered their lies of peace. Now, that era ends.</p>
-                </article>
+                <div class="about-item-wrapper">
+                    <img src="img/allo.png" alt="Me with an Allosaurus" class="about-img-outside-allo">
+                    <article class="about-item">
+                        <p>Hi, I’m Justin! I’m an Associate Software Engineer and a graduate of the University at Buffalo. My interests in computer science span a wide range, including web development, distributed systems, robotics, and game development. Outside of work, I enjoy playing video games, hockey, and building things through metalworking and 3D printing.</p>
+                    </article>
+                    <img src="img/hockey.jpeg" alt="Me playing hockey" class="about-img-outside-hockey">
+                </div>
                 <article class="about-item">
                     <div class="about-header">
                         <h2>Education</h2>
@@ -34,29 +39,7 @@
                             <img src="img/meritlogo.png" alt="Merit Pages">
                         </a>
                     </div>
-                    <p>If someone told me in high school that I’d be going to college for
-                        computer science, I would’ve laughed at them. When I was little, I
-                        always said I wanted to be a paleontologist, but as I got older I
-                        realized that wasn’t a great career choice. In high school, I really
-                        enjoyed the “tech” electives I took, especially metal-working-
-                        related classes. In general, I liked making stuff. In my free time, I
-                        would build armor and weapons from my favorite media out of
-                        foam and cardboard, make YouTube videos, and draw. Ironically, I had
-                        specifically hated the coding portion of these classes to the point where 
-                        I avoided it wherever possible. With all of this in mind, 
-                        I’m sure you’re thinking, “Why would you then choose to spend thousands of 
-                        dollars and 4 years of your life doing something you hated”? The answer to 
-                        that is that I was mistaken. I didn’t hate coding; I hated typing out repetitive 
-                        commands to a virtual robot arm. I discovered this through a little game called Minecraft.<br><br> 
-                        Minecraft is an open-world survival game that, while being plenty of fun on its own, has a 
-                        sizable community of people who enjoy making “mods” for the game. These “mods” can be 
-                        anything from simple modifications to adding in completely new stuff to the game. 
-                        I had played Minecraft and used mods for years, even before high school, but eventually 
-                        I became curious about how these mods were made. After looking into it, I realized I could make my 
-                        own mods and add anything I wanted to the game. At this point, I had no idea what I was doing 
-                        and was mostly just copy-pasting stuff to get the job done, but through playing around with 
-                        modifying Minecraft, I became interested in coding, and realised it was a type of engineering that I enjoyed. 
-                        All of this culminated in my choosing to go into computer science when applying to college.<br><br> After graduating 
+                    <p>After graduating 
                         from Clarence High School in 2021, I enrolled at the University at Buffalo, where I would graduate with a 
                         bachelor's in computer science in 2025. Being such a large school, UB gave me the opportunity to meet and 
                         interact with a very wide variety of people. This, along with a majority of the courses having team-focused 
@@ -68,10 +51,20 @@
                         slight interest in.
                     </p>  
                 </article>
-                <article class="about-item">
-                    <h2>Hobbies and Interests</h2>
-                    <p>We had the Vikings on the run. And, in the mopping up efforts, we also claimed the rest of the scattered Legions, bringing them under Blackstone rule. The Warden, I think, had reservations about some of our methods.</p>
-                </article>
+                <div class="about-item-wrapper">
+                    <div class="about-img-outside">
+                        <img src="img/spartan.jpg" alt="Me in my spartan armor" class="about-img-outside-spartan">
+                        <img src="img/atlas.png" alt="Atlas, my cornsnake." class="about-img-outside-atlas">
+                    </div>
+                    <article class="about-item">
+                        <h2>Hobbies and Interests</h2>
+                        <p>Outside of work, I have a wide variety of hobbies that let me combine creativity, problem-solving, and hands-on building. I enjoy playing video games such as For Honor, DOOM, Monster Hunter, and Halo. I’ve also been developing a mod for the video game Minecraft over the past few years. This project allowed me to utilize concepts I was learning in school, and gave me to opportunity to explore a bit of what game development is like. I’ve been fascinated by dinosaurs since childhood and still explore that passion today through projects like 3D printing a life-size Allosaurus skull or adding them into my Minecraft mod. <br><br> Hockey is another big part of my life. I play 1–2 times a week and enjoy both the exercise and teamwork that come with the game. I also spend time metalworking, where one of my biggest projects has been building an almost complete set of plate armor. My interest in 3D printing has led me to create everything from the previously mentioned dinosaur skull to a suit of armor from Halo. I also keep a leopard gecko and a corn snake, and I enjoy creating naturalistic enclosures that make their habitats enriching and engaging.</p>
+                    </article>
+                    <div class="about-img-outside">
+                        <img src="img/knight.png" alt="Me in my knight armor" class="about-img-outside-knight">
+                        <img src="img/nova.jpeg" alt="Nova, my leopard gecko." class="about-img-outside-nova">
+                    </div>
+                </div>
                 <article class="about-item">
                     <h2>Current Employment</h2>
                     <p>Pending...</p>
@@ -94,5 +87,34 @@
             </div>
         </footer>
     </div>
+        <script>
+const themeLink = document.getElementById('theme-style');
+const themeToggle = document.getElementById('theme-toggle');
+
+// Load theme preference on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        themeLink.setAttribute('href', 'style-dark.css');
+        themeToggle.textContent = 'Light Mode';
+    } else {
+        themeLink.setAttribute('href', 'style.css');
+        themeToggle.textContent = 'Dark Mode';
+    }
+});
+
+// Toggle theme and save preference
+themeToggle.addEventListener('click', function() {
+    if (themeLink.getAttribute('href') === 'style.css') {
+        themeLink.setAttribute('href', 'style-dark.css');
+        this.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeLink.setAttribute('href', 'style.css');
+        this.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'light');
+    }
+});
+</script>
 </body>
 </html>

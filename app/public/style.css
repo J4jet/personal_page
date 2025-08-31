@@ -69,7 +69,7 @@ body {
 header {
     background-color: #fff;
     width: 100%;
-    height: 100px;
+    height: 110px;
     position: fixed;
     top: 0;
     left: 0;
@@ -83,7 +83,7 @@ header .header-name {
     font-weight: 900;
     text-transform: uppercase;
     display: block;
-    margin: 0 auto;
+    margin: 5px auto 0 auto; /* Add 10px top margin */
     text-align: center;
     /* 20px top AND bottom, 0px left and right */
     padding: 20px 0;
@@ -91,7 +91,7 @@ header .header-name {
 
 header nav ul {
     display: block;
-    margin: 0 auto;
+    margin: 0 10 auto;
     width: fit-content;
 }
 
@@ -114,6 +114,20 @@ header .header-github {
     display: none; /* Initially hidden in mobile view */
     float: right;
     margin-right: 20px;
+}
+
+    header .header-theme-toggle {
+    display: block; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    color: #f4f4f4;
+    background-color:#272727;
+    line-height: 20px;
+    border: 2px solid #111;
+    float: right;
+    margin-right: 18px;
+    border-radius: 8px;
+    margin-top: -5px;
 }
 
 /* Desktop Only */
@@ -150,6 +164,21 @@ header .header-github {
     border-radius: 8px;
     margin-top: 20px;
 }
+
+    header .header-theme-toggle {
+    display: block; /* show in desktop view */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #f4f4f4;
+    background-color:#272727;
+    line-height: 38px;
+    border: 2px solid #111;
+    float: right;
+    margin-right: 40px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
     
 }
 
@@ -159,7 +188,7 @@ header .header-github {
     background-color: #979797;
     width: 100%;
     height: calc(100vh - 100px); /* Full height minus header */
-    /*background-image: url('img/banner.jpeg');*/ /* Uncomment later */
+    background-image: url('img/banner-1.jpg'); /* Uncomment later */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -168,23 +197,31 @@ header .header-github {
 
 .index-banner h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 40px;
+    font-size: 50px;
     color: #fff;
     text-align: center;
     font-weight: 900;
     text-shadow: 2px 2px 8px #111; /* 8px of blur */
     line-height: 40px;
+    margin-bottom: 30px;
+    background-color: #979797;
+    border-radius: 8px;
+    padding: 8px 0px;
 }
 
 .index-banner h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 24px;
+    font-size: 18px;
     color: #fff;
     text-align: center;
     font-weight: 100;
-    text-shadow: 2px 2px 8px #111; /* 8px of blur */
-    font-style: italic;
-    line-height: 40px;
+    text-shadow: 2px 2px 8px #111;
+    line-height: 30px;
+    max-width: 350px;      /* Limit width */
+    margin: 0 auto;        /* Center horizontally */
+    padding: 0 2px;
+    background-color: #979797;
+    border-radius: 8px;
 }
 
 .index-banner-center {
@@ -197,7 +234,7 @@ header .header-github {
     width: calc(100% - 32px);
     height: 100px;
     background-color: #cdcdcd;
-    border-radius: 8px; /* <-- Add this line */
+    border-radius: 8px; 
 }
 
 .index-boxes div h3 {
@@ -213,11 +250,19 @@ header .header-github {
 @media (min-width: 768px) {
 
     .wrapper {
-        width: 1000px;
+        width: 1200px;
         margin: 0 auto;
     }
 
     .index-banner {
+        background-color: #979797;
+        width: 100%;
+        height: calc(100vh - 100px); /* Full height minus header */
+        background-image: url('img/banner-2-light.jpg'); /* Uncomment later */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: table;
         height: 500px;
     }
 
@@ -240,6 +285,35 @@ header .header-github {
 
     .index-boxes div h3 {
         line-height: 200px;
+    }
+
+    .index-banner h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 95px;
+        color: #fff;
+        text-align: center;
+        font-weight: 900;
+        line-height: 40px;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 16px #111; /* 16px of blur */
+        background-color: rgba(0, 0, 0, 0.0);
+        margin-right: 500px;
+        padding: 24px 0px;
+    }
+
+    .index-banner h1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        font-weight: 600;
+        line-height: 40px;
+        max-width: 500px;      /* Limit width */
+        margin: 0 auto;        /* Center horizontally */
+        text-shadow: 2px 2px 16px #111; /* 16px of blur */
+        background-color: rgba(0, 0, 0, 0.0);
+        margin-left: 680px;
+        padding: 0 5px;
     }
 }
 
@@ -464,11 +538,43 @@ header .header-github {
     text-decoration: underline;
 }
 
+.contact-images{
+    display: none; 
+    width: 50px;
+    float: right;
+
+}
+
+/* Desktop Only */
+@media (min-width: 768px) {
+
+    .contact-images{
+        display: block; 
+
+    }
+    
+    .contact-imgs-nova img{
+        position: absolute;
+        right: 400px;           /* Distance from right edge */
+        top: 363px; /* 180 for grey bubble */
+        transform: translateY(-50%);
+        width: 120px;          /* Or your preferred size */
+    }
+
+    .contact-imgs-atlas img{
+        position: absolute;
+        right: 700px;           /* Distance from right edge */
+        top: 196px; /* 180 for grey bubble */
+        width: 100px;          /* Or your preferred size */
+    }
+}
+
 /* ABOUT */
 
 .about-intro {
     margin-bottom: 40px;
     margin-top: 40px;
+    text-align: center;
 }
 
 .about-intro h1{
@@ -476,24 +582,27 @@ header .header-github {
     font-weight: 900;
     margin-bottom: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
-    margin-left: 20px;
+    margin-left: -20px;
 }
 
 .about-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center; /* Center horizontally */
+    text-align: center;
     margin-bottom: 10px;
 }
 
 .about-header h2 {
     margin-bottom: 0;
-    margin-right: 16px;
+    margin-right: 10px;
+    text-align: center;
 }
 
 .about-header img {
     width: 60px;
     height: auto;
+    margin-right: 0; /* Remove any extra margin if present */
 }
 
 .about-list {
@@ -501,6 +610,12 @@ header .header-github {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-left: 20px;
+}
+
+.about-item-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .about-item {
@@ -515,6 +630,7 @@ header .header-github {
     font-weight: 600;
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .about-item p {
@@ -524,7 +640,86 @@ header .header-github {
 }
 
 .about-item img {
-    width: 50px;
+    width: 40px;
+    margin-top: -10px;
+}
+
+.about-img {
+    float: right;
+    width: 180px;      /* Adjust size as needed */
+    height: auto;
+    margin: 0 0 16px 16px;
+    padding: 8px;
+}
+
+.about-img-outside-spartan, 
+.about-img-outside-nova, 
+.about-img-outside-knight, 
+.about-img-outside-atlas, 
+.about-img-outside-allo, 
+.about-img-outside-hockey {
+    display: none; 
+}
+
+/* Desktop Only */
+@media (min-width: 768px) {
+
+    .about-img-outside {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .about-item-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: calc(100% - 30px);
+        align-items: center;
+    }
+
+    .about-img-outside-allo {
+        display: block;
+        width: 178px;
+        height: auto;
+        margin-right: 18px;
+        border-radius: 8px;
+        /* Optional: vertically center with the cell */
+        align-self: flex-start;
+    }
+
+    .about-img-outside-spartan, .about-img-outside-atlas {
+        display: block;
+        width: 178px;
+        height: auto;
+        margin-right: 18px;
+        border-radius: 8px;
+        /* Optional: vertically center with the cell */
+        align-self: flex-start;
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
+
+    .about-img-outside-knight,.about-img-outside-nova {
+        display: block;
+        width: 170px;
+        height: auto;
+        margin-left: 18px;
+        border-radius: 8px;
+        /* Optional: vertically center with the cell */
+        align-self: flex-start;
+        margin-bottom: 12px;
+    }
+
+    .about-img-outside-hockey {
+        display: block;
+        width: 199px;
+        height: auto;
+        margin-left: 18px;
+        border-radius: 8px;
+        /* Optional: vertically center with the cell */
+        align-self: flex-start;
+    }
+    
 }
 
 /* FOOTER */

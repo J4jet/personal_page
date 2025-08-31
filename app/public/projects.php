@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin Forgette - Projects</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" id="theme-style">
 </head>
 <body>
     <header>
@@ -16,6 +16,7 @@
                 <li><a href="contact.php">Contact</a></li>
             </ul>
             <a href="https://github.com/J4jet" target="_blank" rel="noopener noreferrer" class="header-github">GitHub</a>
+            <button id="theme-toggle" class="header-theme-toggle">Dark Mode</button>
         </nav>
     </header>
     <main>
@@ -60,5 +61,34 @@
             </div>
         </footer>
     </div>
+        <script>
+const themeLink = document.getElementById('theme-style');
+const themeToggle = document.getElementById('theme-toggle');
+
+// Load theme preference on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        themeLink.setAttribute('href', 'style-dark.css');
+        themeToggle.textContent = 'Light Mode';
+    } else {
+        themeLink.setAttribute('href', 'style.css');
+        themeToggle.textContent = 'Dark Mode';
+    }
+});
+
+// Toggle theme and save preference
+themeToggle.addEventListener('click', function() {
+    if (themeLink.getAttribute('href') === 'style.css') {
+        themeLink.setAttribute('href', 'style-dark.css');
+        this.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeLink.setAttribute('href', 'style.css');
+        this.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'light');
+    }
+});
+</script>
 </body>
 </html>
