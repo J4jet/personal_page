@@ -359,7 +359,7 @@ header .header-github {
 .project-item-rexcraft {
     position: relative; /* Needed for absolute positioning of child */
     overflow: hidden;   /* Prevent overflow from absolutely positioned img */
-    background-image: url('img/cobble.png');
+    background-image: url('img/grass_block.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -647,6 +647,23 @@ header .header-github {
 .about-item img {
     width: 40px;
     margin-top: -10px;
+}
+
+
+
+.l3h {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+.emp {
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: -6px;
 }
 
 .about-img {

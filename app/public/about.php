@@ -66,8 +66,11 @@
                     </div>
                 </div>
                 <article class="about-item">
-                    <h2>Current Employment</h2>
-                    <p>Pending...</p>
+                    <h2 class="emp">Current Employment</h2>
+                        <a class="l3h" href="https://www.l3harris.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="img/l3harris_logo.png" alt="L3Harris Technologies">
+                        </a>
+                    <p class="emp">I'm currently employed as an Associate Software Engineer at L3Harris Technologies.</p>
                 </article>
             </section>
         </div>
