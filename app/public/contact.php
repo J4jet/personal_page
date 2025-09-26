@@ -26,7 +26,6 @@
             </section>
             <section class="contact-list">
                 <article class="contact-item">
-                    <h2>Email: justin.forgette119@gmail.com</h2>
                     <h2>LinkedIn: <a href="https://www.linkedin.com/in/justin-forgette/" target="_blank" rel="noopener noreferrer" class="contact-linked">Justin Forgette</a></h2>
                     <h2>GitHub: <a href="https://github.com/J4jet" target="_blank" rel="noopener noreferrer" class="contact-linked">J4jet</a></h2>
                     <article class="contact-images">

@@ -556,7 +556,7 @@ header .header-github {
     .contact-imgs-nova img{
         position: absolute;
         right: 400px;           /* Distance from right edge */
-        top: 363px; /* 180 for grey bubble */
+        top: 328px; /* 180 for grey bubble */
         transform: translateY(-50%);
         width: 120px;          /* Or your preferred size */
     }
